@@ -1,0 +1,65 @@
+h1,
+h2 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.skorTinggi {
+  display: inline;
+  text-align: center;
+}
+p {
+  display: inline;
+}
+body {
+  background-color: coral;
+}
+.mulai {
+  display: block;
+  margin: auto;
+}
+.container {
+  width: 600px;
+  /* border: 1px solid black; */
+  cursor: url("../img/palu1.png"), auto;
+  margin: auto;
+}
+
+.container:active {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: url(../img/palu2.png), auto;
+}
+
+.tanah {
+  /* border: 1px solid red; */
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+
+.tanah::after {
+  content: "";
+  width: 200px;
+  height: 100px;
+  display: block;
+  background: url(../img/tanah.png) bottom center no-repeat;
+  background-size: 80%;
+  bottom: -25px;
+  position: absolute;
+}
+
+.tikus {
+  background-color: red;
+  height: 200px;
+  width: 200px;
+  background: url(../img/tikus.png) bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 150px;
+  transition: top 0.2s;
+}
+
+.tanah.muncul .tikus {
+  top: 10px;
+}
